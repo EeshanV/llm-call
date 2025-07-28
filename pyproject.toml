@@ -1,0 +1,18 @@
+[project]
+name = "llm-call"  
+version = "0.1.0"
+description = "A simple wrapper for Gemini/OpenAI LLM calls"
+readme = "README.md"
+authors = [
+  { name="Eeshan V", email="eeshanvsk@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+  "google-gemai>=1.27.0",
+  "openai>=1.97.1"
+]
+license = { text = "MIT" }
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel", "build"]
+build-backend = "setuptools.build_meta"
