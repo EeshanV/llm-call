@@ -43,7 +43,7 @@ def call_llm(user_prompt: str, apikey:str, config: Dict[str, Any], provider: str
             raise RuntimeError(f"Gemini API error {e}") from e
     
     elif provider == "openai":
-        client = OpenAIClient(api_key=apikey, base_url="http://localhost:8000/v1")
+        client = OpenAIClient(api_key=apikey, base_url=config.get("url"))
         try:
             response = client.chat.completions.create(
                 model=config.get("model"),
